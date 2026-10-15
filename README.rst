@@ -1,3 +1,10 @@
+TheoLore panvkJava
+==================
+
+This repository is a clean PanVK source tree carrying the kbase and Job Manager support from the FristOneRR PanVK source project.
+
+Upstream project documentation follows below.
+
 `Mesa <https://mesa3d.org>`_ - The 3D Graphics Library
 ======================================================
 
