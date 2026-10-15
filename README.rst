@@ -1,64 +1,54 @@
 TheoLore panvkJava
 ==================
 
-This repository is a clean PanVK source tree carrying the kbase and Job Manager support from the FristOneRR PanVK source project.
+A clean source tree for Mesa PanVK with experimental Android kbase and Job Manager support.
 
-Upstream project documentation follows below.
+This repository is based on Mesa and the PanVK work maintained by the Mesa community. It is
+not an independent reimplementation of Mesa, and TheoLore does not claim ownership of Mesa,
+PanVK, or third-party code included in this tree.
 
-`Mesa <https://mesa3d.org>`_ - The 3D Graphics Library
-======================================================
+What is included
+----------------
 
+* Mesa PanVK Vulkan driver sources.
+* Android kbase kernel-interface support.
+* Job Manager (JM) PanVK sources for compatible Mali hardware.
+* Related kernel UAPI headers, documentation, and Android integration files.
 
-Source
-------
+The kbase and Job Manager paths are experimental. Hardware compatibility depends on the Mali
+GPU generation, the Android kernel, the kbase ABI, and the device configuration. No build or
+binary release is provided by this repository unless explicitly published in Releases.
 
-This repository lives at https://gitlab.freedesktop.org/mesa/mesa.
-Other repositories are likely forks, and code found there is not supported.
+Upstream and provenance
+-----------------------
 
+* Mesa: https://www.mesa3d.org/
+* Mesa documentation: https://docs.mesa3d.org/
+* Source project used for this tree: https://github.com/FristOneRR-Admin/FristOneRR-Panvk-Source
+* This repository: https://github.com/TheoLore/panvkJava
 
-Build & install
----------------
+Copyright and licenses
+----------------------
 
-You can find more information in our documentation (`docs/install.rst
-<https://docs.mesa3d.org/install.html>`_), but the recommended way is to use
-Meson (`docs/meson.rst <https://docs.mesa3d.org/meson.html>`_):
+Mesa and PanVK remain the property of their original copyright holders and contributors. The
+applicable license and copyright notices are part of the source tree and must be preserved when
+copying, modifying, or redistributing the code.
 
-.. code-block:: sh
+This repository contains Mesa code together with code, headers, generated files, and third-party
+components that may have separate copyright notices and license terms. Do not assume that every
+file has the same license. Before redistribution, review:
 
-  $ meson setup build
-  $ ninja -C build/
-  $ sudo ninja -C build/ install
+* ``docs/license.rst`` for Mesa licensing guidance.
+* License and copyright notices in the relevant source directory.
+* SPDX headers and notices at the beginning of individual files.
+* ``LICENSE.txt`` files supplied by third-party components.
 
-Support
--------
-
-Many Mesa devs hang on IRC; if you're not sure which channel is
-appropriate, you should ask your question on `OFTC's #dri-devel
-<irc://irc.oftc.net/dri-devel>`_, someone will redirect you if
-necessary.
-Remember that not everyone is in the same timezone as you, so it might
-take a while before someone qualified sees your question.
-To figure out who you're talking to, or which nick to ping for your
-question, check out `Who's Who on IRC
-<https://dri.freedesktop.org/wiki/WhosWho/>`_.
-
-The next best option is to ask your question in an email to the
-mailing lists: `mesa-dev\@lists.freedesktop.org
-<https://lists.freedesktop.org/mailman/listinfo/mesa-dev>`_
-
-
-Bug reports
------------
-
-If you think something isn't working properly, please file a bug report
-(`docs/bugs.rst <https://docs.mesa3d.org/bugs.html>`_).
-
+The file ``docs/README.previous.rst`` preserves the previous README for reference. It is
+documentation only and does not replace the original licenses or copyright notices.
 
 Contributing
 ------------
 
-Contributions are welcome, and step-by-step instructions can be found in our
-documentation (`docs/submittingpatches.rst
-<https://docs.mesa3d.org/submittingpatches.html>`_).
-
-Note that Mesa uses gitlab for patches submission, review and discussions.
+Keep existing copyright notices and SPDX identifiers intact. Clearly identify changes made in
+this fork, do not present upstream work as original work, and include source attribution when
+importing code from another project.
